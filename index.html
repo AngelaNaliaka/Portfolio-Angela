@@ -1,0 +1,505 @@
+/** @jsxImportSource https://esm.sh/react@18.2.0 */
+import React, { useState, useEffect } from "https://esm.sh/react@18.2.0";
+import { createRoot } from "https://esm.sh/react-dom@18.2.0/client";
+
+// Dynamic AI Image Generation Utility
+const generateAIImage = (description: string) => 
+  `https://maxm-imggenurl.web.val.run/${encodeURIComponent(description)}`;
+
+// Futuristic Cyberpunk Color Palette
+const COLORS = {
+  background: '#0A1128',
+  primary: '#0E6BA8',
+  secondary: '#9C27B0',
+  accent: '#00BCD4',
+  text: '#E0E0E0',
+  highlight: 'rgba(156, 39, 176, 0.3)'
+};
+
+// Animated Hover Effect Hook
+function useHoverEffect() {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  const hoverProps = {
+    onMouseEnter: () => setIsHovered(true),
+    onMouseLeave: () => setIsHovered(false),
+    style: {
+      transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+      transition: 'transform 0.3s ease',
+      boxShadow: isHovered ? `0 0 15px ${COLORS.secondary}` : 'none'
+    }
+  };
+
+  return hoverProps;
+}
+
+function AboutSection() {
+  const hoverProps = useHoverEffect();
+
+  return (
+    <div>
+      <h1 style={{ color: COLORS.accent }}>Angela Naliaka: Urban Tech Visionary</h1>
+      <div style={{ display: 'flex', alignItems: 'center' }} {...hoverProps}>
+        <img 
+          src={generateAIImage('Futuristic tech professional in cyberpunk style portrait of Angela Naliaka')} 
+          alt="Angela Naliaka Portrait" 
+          style={{ 
+            width: '300px', 
+            borderRadius: '50%', 
+            border: `4px solid ${COLORS.primary}`,
+            transition: 'all 0.3s ease'
+          }}
+        />
+        <div style={{ marginLeft: '2rem' }}>
+          <p style={{ fontStyle: 'italic', marginBottom: '1rem' }}>
+            👩‍💻 Urban Planner | 💻 Software Developer | 🎨 Graphic Designer
+          </p>
+          <p>
+            Hey, I'm Angela Naliaka—an urban planner, software developer, and graphic designer 
+            with a mission to revolutionize smart cities. I blend code, creativity, and urban 
+            blueprints to build tech-driven solutions for sustainable urban development, 
+            smart mobility, and futuristic infrastructure.
+          </p>
+          <p style={{ marginTop: '1rem' }}>
+            When I'm not designing the cities of tomorrow, I'm probably sketching bold branding 
+            concepts, optimizing telemedicine platforms, or dreaming up a world where AI and 
+            sustainability redefine urban life. 🚀
+          </p>
+
+          <div style={{ marginTop: '1rem' }}>
+            <h3 style={{ color: COLORS.secondary }}>🚀 Programming Languages</h3>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '2rem' }}>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>HTML/CSS</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+
+          <div style={{ marginTop: '1rem' }}>
+            <h3 style={{ color: COLORS.secondary }}>🎓 Educational Background</h3>
+            <p>
+              • Bachelor of Science in Urban & Regional Planning – Kenyatta University
+            </p>
+            <p>
+              • Software Engineering Certification – Power Learn Project
+            </p>
+            <a 
+              href="https://drive.google.com/file/d/1c26cyrXqhKFlR_c9TaaWdKvRNQ9-bhe0/view?usp=sharing" 
+              target="_blank"
+              style={{
+                color: COLORS.accent,
+                textDecoration: 'none',
+                border: `1px solid ${COLORS.accent}`,
+                padding: '0.5rem',
+                borderRadius: '5px',
+                display: 'inline-block',
+                marginTop: '0.5rem'
+              }}
+            >
+              📄 Download My CV
+            </a>
+          </div>
+
+          <div style={{ marginTop: '1rem' }}>
+            <h3 style={{ color: COLORS.secondary }}>💡 Interests & Passion</h3>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+              <li>🚗 Smart Mobility – Designing urban spaces where EVs and AI-powered transit systems rule the roads.</li>
+              <li>🏙️ Smart Cities – Integrating IoT, AI, and renewable energy to build futuristic, sustainable urban environments.</li>
+              <li>🎨 Visual Branding – Crafting digital and physical experiences that bring futuristic aesthetics to life.</li>
+              <li>💻 Hackathons & Innovation – I love pushing limits, solving challenges, and building the next big thing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const projects = [
+    {
+      name: "Veltri Landing Page",
+      description: "Low-code landing page development",
+      image: "https://maxm-imggenurl.web.val.run/veltri-landing-page",
+      link: "https://veltri.pages.dev",
+      technologies: ['Low-Code', 'Web Development'],
+      fullDescription: "A sleek and responsive landing page created using low-code tools, demonstrating web development skills."
+    },
+    {
+      name: "Smart Telemedicine Platform",
+      description: "Revolutionary urban health solution leveraging AI and IoT",
+      image: generateAIImage('Holographic medical interface for smart city telemedicine'),
+      technologies: ['React', 'Node.js', 'AI', 'IoT'],
+      fullDescription: "A comprehensive telemedicine platform that integrates AI-driven diagnostics with urban health infrastructure, enabling remote medical consultations and predictive health analytics."
+    },
+    {
+      name: "Urban Data Visualization",
+      description: "Interactive city blueprint using real-time data analytics",
+      image: generateAIImage('Digital wireframe of a futuristic smart city'),
+      technologies: ['D3.js', 'WebGL', 'Big Data', 'GIS'],
+      fullDescription: "An advanced data visualization tool that transforms complex urban data into intuitive, interactive 3D city models, helping urban planners make data-driven decisions."
+    },
+    {
+      name: "Graphic Design Poster 1",
+      description: "Creative poster design showcasing urban innovation",
+      image: "https://maxm-imggenurl.web.val.run/urban-innovation-poster-design",
+      link: "https://www.canva.com/design/DAGhIzCKRVU/EA5HA83eLN9VvIQansdnWg/edit?utm_content=DAGhIzCKRVU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      technologies: ['Canva', 'Graphic Design'],
+      fullDescription: "A visually compelling poster design that captures the essence of urban technological innovation."
+    },
+    {
+      name: "Graphic Design Poster 2",
+      description: "Digital skills poster design",
+      image: "https://maxm-imggenurl.web.val.run/urban-landscape-poster",
+      link: "https://www.canva.com/design/DAGSUMTMfwM/LXND7ALtplzg1wZDBhHF4g/edit",
+      technologies: ['Canva', 'Graphic Design'],
+      fullDescription: "A poster design encouraging application to digital skills programs."
+    },
+    {
+      name: "Candles Business Branding",
+      description: "Logo and branding design for candle business",
+      image: "https://maxm-imggenurl.web.val.run/candle-business-branding",
+      link: "https://www.canva.com/design/DAGTn0elRbo/6nhaTjozXIm44DiDP7M3qw/edit",
+      technologies: ['Canva', 'Branding', 'Logo Design'],
+      fullDescription: "A comprehensive branding solution for a candle business, including logo design and visual identity."
+    }
+  ];
+
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h2 style={{ color: COLORS.accent }}>Innovative Projects</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+        {projects.map(project => (
+          <div 
+            key={project.name} 
+            onClick={() => setSelectedProject(project)}
+            style={{ 
+              flex: '1 1 calc(33.333% - 1rem)',
+              minWidth: '250px',
+              background: 'rgba(255,255,255,0.1)',
+              padding: '1rem',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              transform: selectedProject === project ? 'scale(1.05)' : 'scale(1)',
+              boxShadow: selectedProject === project ? `0 0 15px ${COLORS.secondary}` : 'none'
+            }}
+          >
+            <img 
+              src={project.image} 
+              alt={project.name} 
+              style={{ width: '100%', borderRadius: '10px', height: '200px', objectFit: 'cover' }} 
+            />
+            <h3 style={{ color: COLORS.secondary }}>{project.name}</h3>
+            <p>{project.description}</p>
+            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
+              {project.technologies.map(tech => (
+                <span 
+                  key={tech}
+                  style={{
+                    background: COLORS.highlight,
+                    padding: '0.25rem 0.5rem',
+                    borderRadius: '5px',
+                    fontSize: '0.8rem'
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            {project.link && (
+              <a 
+                href={project.link} 
+                target="_blank" 
+                style={{
+                  display: 'block',
+                  marginTop: '0.5rem',
+                  color: COLORS.accent,
+                  textDecoration: 'none'
+                }}
+              >
+                View Project
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      {selectedProject && (
+        <div style={{
+          marginTop: '1rem',
+          background: 'rgba(255,255,255,0.05)',
+          padding: '1rem',
+          borderRadius: '10px'
+        }}>
+          <h3 style={{ color: COLORS.accent }}>Project Details</h3>
+          <p>{selectedProject.fullDescription}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SocialMediaSection() {
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/angela-naliaka",
+      icon: "💼"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/AngelaNaliaka",
+      icon: "💻"
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/AngelaNaliaka",
+      icon: "🐦"
+    }
+  ];
+
+  return (
+    <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <h2 style={{ color: COLORS.accent }}>Connect with Me</h2>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '2rem', 
+        marginTop: '2rem' 
+      }}>
+        {socialLinks.map(link => (
+          <a 
+            key={link.name}
+            href={link.url} 
+            target="_blank"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              color: COLORS.text,
+              textDecoration: 'none',
+              padding: '1rem',
+              background: 'rgba(255,255,255,0.1)',
+              borderRadius: '10px',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            <span style={{ fontSize: '3rem' }}>{link.icon}</span>
+            <span style={{ marginTop: '0.5rem', color: COLORS.accent }}>{link.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Message sent! \n${JSON.stringify(formData, null, 2)}`);
+    // In a real app, you'd send this to a backend
+  };
+
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h2 style={{ color: COLORS.accent }}>Connect & Collaborate</h2>
+      <form 
+        onSubmit={handleSubmit}
+        style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          maxWidth: '500px',
+          margin: '0 auto',
+          background: 'rgba(255,255,255,0.1)',
+          padding: '2rem',
+          borderRadius: '10px'
+        }}
+      >
+        <input 
+          type="text" 
+          name="name"
+          placeholder="Name" 
+          value={formData.name}
+          onChange={handleInputChange}
+          style={{ 
+            marginBottom: '1rem', 
+            padding: '0.5rem',
+            background: COLORS.background,
+            color: COLORS.text,
+            border: `1px solid ${COLORS.primary}`
+          }} 
+        />
+        <input 
+          type="email" 
+          name="email"
+          placeholder="Email" 
+          value={formData.email}
+          onChange={handleInputChange}
+          style={{ 
+            marginBottom: '1rem', 
+            padding: '0.5rem',
+            background: COLORS.background,
+            color: COLORS.text,
+            border: `1px solid ${COLORS.primary}`
+          }} 
+        />
+        <textarea 
+          name="message"
+          placeholder="Your Message" 
+          value={formData.message}
+          onChange={handleInputChange}
+          style={{ 
+            marginBottom: '1rem', 
+            padding: '0.5rem',
+            minHeight: '150px',
+            background: COLORS.background,
+            color: COLORS.text,
+            border: `1px solid ${COLORS.primary}`
+          }}
+        />
+        <button 
+          type="submit"
+          style={{
+            background: COLORS.secondary,
+            color: COLORS.text,
+            border: 'none',
+            padding: '0.75rem',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  );
+}
+
+function PortfolioApp() {
+  const [activeSection, setActiveSection] = useState('about');
+
+  const renderSection = () => {
+    switch(activeSection) {
+      case 'about': return <AboutSection />;
+      case 'projects': return <ProjectsSection />;
+      case 'contact': return <ContactSection />;
+      case 'social': return <SocialMediaSection />;
+      default: return <AboutSection />;
+    }
+  };
+
+  return (
+    <div style={{
+      fontFamily: "'Orbitron', 'Helvetica Neue', sans-serif",
+      backgroundColor: COLORS.background,
+      color: COLORS.text,
+      minHeight: '100vh',
+      padding: '2rem'
+    }}>
+      <nav style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '2rem',
+        gap: '2rem'
+      }}>
+        <button 
+          onClick={() => setActiveSection('about')}
+          style={{
+            background: activeSection === 'about' ? COLORS.secondary : 'transparent',
+            color: COLORS.text,
+            border: 'none',
+            padding: '0.5rem 1rem',
+            cursor: 'pointer'
+          }}
+        >
+          About
+        </button>
+        <button 
+          onClick={() => setActiveSection('projects')}
+          style={{
+            background: activeSection === 'projects' ? COLORS.secondary : 'transparent',
+            color: COLORS.text,
+            border: 'none',
+            padding: '0.5rem 1rem',
+            cursor: 'pointer'
+          }}
+        >
+          Projects
+        </button>
+        <button 
+          onClick={() => setActiveSection('contact')}
+          style={{
+            background: activeSection === 'contact' ? COLORS.secondary : 'transparent',
+            color: COLORS.text,
+            border: 'none',
+            padding: '0.5rem 1rem',
+            cursor: 'pointer'
+          }}
+        >
+          Contact
+        </button>
+        <button 
+          onClick={() => setActiveSection('social')}
+          style={{
+            background: activeSection === 'social' ? COLORS.secondary : 'transparent',
+            color: COLORS.text,
+            border: 'none',
+            padding: '0.5rem 1rem',
+            cursor: 'pointer'
+          }}
+        >
+          Social
+        </button>
+      </nav>
+      {renderSection()}
+    </div>
+  );
+}
+
+function client() {
+  createRoot(document.getElementById("root")).render(<PortfolioApp />);
+}
+
+if (typeof document !== "undefined") { client(); }
+
+export default async function server(request: Request): Promise<Response> {
+  return new Response(`
+    <html>
+      <head>
+        <title>Angela Naliaka - Urban Tech Visionary</title>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+          body { 
+            margin: 0; 
+            background: ${COLORS.background}; 
+            color: ${COLORS.text}; 
+          }
+        </style>
+      </head>
+      <body>
+        <div id="root"></div>
+        <script src="https://esm.town/v/std/catch"></script>
+        <script type="module" src="${import.meta.url}"></script>
+      </body>
+    </html>
+  `, {
+    headers: {
+      "content-type": "text/html",
+    },
+  });
+}
