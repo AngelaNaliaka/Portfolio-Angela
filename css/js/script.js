@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Footer Current Year ---
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
+        currentYearSpan.textContent = new Date().getFullYear(); // Dynamically sets the year
     }
 
     // --- Active Navigation Link Styling ---
@@ -52,6 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // card.style.transform = 'translateY(0) scale(1)';
         });
     });
+
+     // --- Basic Form Placeholder Alert (since no backend) ---
+     const contactForm = document.getElementById('contact-form-element');
+     if(contactForm) {
+         contactForm.addEventListener('submit', (e) => {
+             e.preventDefault(); // Prevent actual form submission
+             alert('Thank you for your message! (Note: This is a demo form and does not send emails.)');
+             // Optionally clear the form
+             // contactForm.reset();
+         });
+     }
+
 
     console.log("Portfolio script loaded.");
     // Add more simple interactions here if needed
