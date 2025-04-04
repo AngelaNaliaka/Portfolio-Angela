@@ -36,13 +36,18 @@ I thrive at the **intersection of tech, urban planning, and sustainability**. My
 
 ## 📁 Repository Structure
 ```
-├── /about                # About me and professional journey
-├── /projects             # Showcasing my smart city, web dev & design projects
-├── /blog                 # Insights, research, and thoughts on urban tech
-├── /assets               # Images, graphics, and branding materials
-├── /contact              # Get in touch with me
-├── README.md             # You're here!
-```
+your-portfolio/
+├── index.html         (Home Page)
+├── about.html         (About Me Page)
+├── projects.html      (Projects Page)
+├── blog.html          (Blog Page)
+├── contact.html       (Contact Page)
+├── css/
+│   └── style.css      (Main Stylesheet)
+├── js/
+│   └── script.js      (JavaScript for interactions)
+└── assets/
+    ├── images/        (Folder for images)
 
 ## 📬 Get in Touch
 🔗 **LinkedIn:** [linkedin.com/in/angela-naliaka](#)  
