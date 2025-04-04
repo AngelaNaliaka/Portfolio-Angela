@@ -3,9 +3,9 @@
 Welcome to my personal portfolio repository! This is where I showcase my skills, projects, and journey at the intersection of **urban planning, software development, and graphic design**. My mission? To revolutionize smart cities using technology, design, and innovation. 🌍💡
 
 ## 📌 About Me
-Hey, I’m **Angela Naliaka**—an **urban planner, software developer, and graphic designer** passionate about building **sustainable, smart, and tech-driven urban solutions**. I merge **code, creativity, and city blueprints** to drive change in **smart mobility, urban infrastructure, and digital branding**.
+Hey, I’m **Angela Naliaka** an **urban planner, software developer, and graphic designer** passionate about building **sustainable, smart, and tech-driven urban solutions**. I merge **code, creativity, and city blueprints** to drive change in **smart mobility, urban infrastructure, and digital branding**.
 
-When I’m not designing the **cities of tomorrow**, I’m either **optimizing telemedicine platforms, crafting futuristic branding concepts, or solving real-world challenges in hackathons**. 🚀
+When I’m not designing the **cities of tomorrow**, I’m either **optimizing my telemedicine platform, crafting futuristic branding concepts, or solving real-world challenges through hackathons**. 🚀
 
 ## 🖥️ Tech Stack & Skills
 
@@ -21,15 +21,14 @@ When I’m not designing the **cities of tomorrow**, I’m either **optimizing t
 
 ## 🎓 Educational Background
 - **Bachelor of Science in Urban & Regional Planning** – Kenyatta University
-- **Software Engineering Certification** – Power Learn Project
-- **Adobe Certified Associate** – Photoshop & Illustrator
+- **Software Engineering Certification** – Power Learn Project Africa Academy
+- **Certification in UI/UX Design** - Ajira Digital
 
 📄 **[Download My CV](#)**
 
 ## 💡 Interests & Passion
 I thrive at the **intersection of tech, urban planning, and sustainability**. My key focus areas include:
 
-- **🚗 Smart Mobility** – Designing urban spaces where **EVs and AI-powered transit systems** redefine movement.
 - **🏙️ Smart Cities** – Integrating **IoT, AI, and renewable energy** to build the cities of tomorrow.
 - **🎨 Visual Branding** – Creating **immersive digital and physical experiences** that reflect futuristic aesthetics.
 - **💻 Hackathons & Innovation** – I love **pushing boundaries, solving challenges, and building game-changing solutions**.
@@ -37,7 +36,7 @@ I thrive at the **intersection of tech, urban planning, and sustainability**. My
 ## 📁 Repository Structure
 ```
 your-portfolio/
-├── index.html         (Home Page)
+├──index.html         (Home Page)
 ├── about.html         (About Me Page)
 ├── projects.html      (Projects Page)
 ├── blog.html          (Blog Page)
