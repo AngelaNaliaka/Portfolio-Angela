@@ -53,6 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: calc(var(--spacing-unit) * 3); }
 h2 { font-size: 2rem; margin-top: calc(var(--spacing-unit) * 5); margin-bottom: calc(var(--spacing-unit) * 2.5);}
 h3 { font-size: 1.4rem; font-weight: 600; color: var(--color-text); margin-top: calc(var(--spacing-unit) * 3); }
+h4 { font-size: 1.1rem; font-weight: 600; color: var(--color-accent); margin-top: calc(var(--spacing-unit) * 1.5); margin-bottom: calc(var(--spacing-unit) * 0.5);}
+
 
 p {
     margin-bottom: calc(var(--spacing-unit) * 2); /* 16px */
@@ -159,6 +161,18 @@ img {
     font-size: 0.9rem;
 }
 
+.footer-social-links {
+    margin-top: var(--spacing-unit);
+}
+.footer-social-links a {
+    color: var(--color-text);
+    margin: 0 calc(var(--spacing-unit) * 0.5);
+}
+.footer-social-links a:hover {
+    color: var(--color-accent);
+}
+
+
 /* --- Buttons & Links --- */
 .cta-button {
     display: inline-block;
@@ -170,6 +184,7 @@ img {
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease;
     border: 1px solid var(--color-accent);
+    cursor: pointer; /* Added for button */
 }
 
 .cta-button:hover, .cta-button:focus {
@@ -193,6 +208,12 @@ img {
 
 .link-arrow:hover {
     transform: translateX(5px);
+}
+
+/* Style for internal project links */
+.link-arrow.internal-link {
+     margin-top: calc(var(--spacing-unit) * 0.5);
+     font-size: 0.95rem;
 }
 
 
@@ -313,6 +334,10 @@ img {
     left: -5px;
     top: 1px;
 }
+.education-interests li {
+    padding-left: 0; /* No bullet for education items */
+}
+
 
 /* Projects Page */
 .project-category {
@@ -338,6 +363,7 @@ img {
     border-radius: 8px;
     border: 1px solid var(--color-border);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Ensure content fits */
 }
 
 .project-card:hover {
@@ -357,6 +383,11 @@ img {
     min-height: 200px; /* Ensure image area has some height */
 }
 
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .project-info h3 {
     margin-top: 0;
     margin-bottom: var(--spacing-unit); /* 8px */
@@ -370,6 +401,14 @@ img {
     font-weight: 500;
     color: var(--color-accent);
 }
+
+/* Styling for nested project details */
+.project-details {
+    margin-top: var(--spacing-unit);
+    padding-top: var(--spacing-unit);
+    border-top: 1px solid var(--color-border); /* Optional separator */
+}
+
 
 /* Blog Page */
 .blog-list {
@@ -393,6 +432,9 @@ img {
     width: 100%;
 }
 
+.blog-post-content header {
+    margin-bottom: var(--spacing-unit);
+}
 .blog-post-content h2 {
     margin-top: 0;
     margin-bottom: calc(var(--spacing-unit) * 0.5); /* 4px */
@@ -467,6 +509,7 @@ img {
 
 .contact-info p {
     margin-bottom: calc(var(--spacing-unit) * 1.5); /* 12px */
+    word-break: break-word; /* Prevent long links overflowing */
 }
 .contact-info strong { font-weight: 600; }
 
@@ -563,4 +606,7 @@ main {
     .hero { min-height: 50vh; padding: calc(var(--spacing-unit) * 5) 0; }
 
     .container { padding: 0 var(--spacing-unit); /* 8px */ }
+
+    .project-card { padding: calc(var(--spacing-unit) * 2); } /* Reduce padding */
+    .contact-content { padding: calc(var(--spacing-unit) * 3); }
 }
