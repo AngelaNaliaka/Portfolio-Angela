@@ -34,7 +34,7 @@ I thrive at the **intersection of tech, urban planning, and sustainability**. My
 - **💻 Hackathons & Innovation** – I love **pushing boundaries, solving challenges, and building game-changing solutions**.
 
 - ## 🌐 Live Demo
-Click (https://github.com/AngelaNaliaka/Portfolio-Angela) to view the live website.
+Click (https://angelanaliaka.github.io/Portfolio-Angela/) to view the live website.
 
 ## 📁 Repository Structure
 ```
