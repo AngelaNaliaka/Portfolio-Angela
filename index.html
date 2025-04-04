@@ -1,309 +1,58 @@
-export default async function server(request: Request) {
-  return new Response(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Urban Innovator | Tech & Design Portfolio</title>
-      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-      <style>${css}</style>
-    </head>
-    <body>
-      <nav>
-        <div class="logo">◼️</div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Multidisciplinary Innovator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">Your Name</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </header>
 
-      <main>
-        <section id="home" class="hero">
-          <div class="hero-content">
-            <h1>Urban Tech Innovator</h1>
-            <p>Bridging Technology, Design, and Urban Futures</p>
-            <a href="#about" class="cta-button">Explore My Work</a>
-          </div>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Building the Future:<br>Smart Cities, Sustainable Tech,<br>Innovative Design.</h1>
+                <p class="subtitle">A multidisciplinary innovator at the intersection of urban planning, software engineering, and human-centered design.</p>
+                <a href="projects.html" class="cta-button">Explore My Work</a>
+            </div>
+            <div class="hero-background">
+                 </div>
         </section>
 
-        <section id="about" class="about-section">
-          <div class="section-header">
-            <h2>About Me</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-text">
-              <p>I'm a multidisciplinary innovator passionate about transforming urban landscapes through technology, design, and strategic planning.</p>
-              <h3>Core Competencies</h3>
-              <ul>
-                <li>Urban Planning</li>
-                <li>Software Development</li>
-                <li>UI/UX Design</li>
-                <li>Smart City Technologies</li>
-              </ul>
-              <a href="https://drive.google.com/file/d/1c26cyrXqhKFlR_c9TaaWdKvRNQ9-bhe0/view?usp=sharing" target="_blank" class="download-cv">Download CV ↓</a>
-            </div>
-            <div class="about-skills">
-              <div class="skill-category">
-                <h4>Programming</h4>
-                <div class="skill-bars">
-                  <div class="skill" style="width: 90%">Python</div>
-                  <div class="skill" style="width: 85%">JavaScript</div>
-                  <div class="skill" style="width: 80%">SQL</div>
-                  <div class="skill" style="width: 75%">Node.js</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section class="intro-snippet">
+             <div class="container">
+                 <h2>Bridging Disciplines</h2>
+                 <p>Fusing expertise in urban planning, software development, and design thinking to create solutions for tomorrow's urban landscapes and digital experiences.</p>
+                 <a href="about.html" class="link-arrow">Learn More About Me &rarr;</a>
+             </div>
         </section>
 
-        <section id="projects" class="projects-section">
-          <div class="section-header">
-            <h2>Selected Projects</h2>
-          </div>
-          <div class="project-grid">
-            <div class="project-card">
-              <h3>Low-Code Landing Page for Smart City Telemedicine</h3>
-              <p>Web Designer & Developer: Designed and developed a low-code, sleek landing page for a smart city telemedicine application, showcasing its features, benefits, and impact.</p>
-              <a href="https://veltri.pages.dev" target="_blank" class="project-link">View Project</a>
+        </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. Shaping the future, thoughtfully.</p>
             </div>
-            <div class="project-card">
-              <h3>Nairobi Nights – Sustainable Candle Branding</h3>
-              <p>Graphic Design: Created a brand identity and logo design for a company introducing sustainable, handcrafted candles. Focused on eco-conscious branding with an elegant aesthetic.</p>
-              <a href="https://www.canva.com/design/DAGTn0elRbo/6nhaTjozXIm44DiDP7M3qw/edit?utm_content=DAGTn0elRbo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Project</a>
-            </div>
-            <div class="project-card">
-              <h3>Urban Community Mapping Platform</h3>
-              <div class="project-details">
-                <h4>Policy Development for Integrated Water Resource Management</h4>
-                <p>Collaborated with public and private partners to develop innovative policy frameworks for sustainable water resource management.</p>
-                <a href="https://drive.google.com/file/d/1ws4nS6_p0R2OiAhEqAxRqc8urpVCiPDK/view?usp=drive_link" target="_blank" class="project-image-link">View Meeting Documentation</a>
-                
-                <h4>Building Audit & Smart Urban Cities</h4>
-                <p>Conducted comprehensive building audits in Kenya, demonstrating expertise in urban infrastructure assessment and smart city technologies.</p>
-                <a href="https://drive.google.com/file/d/1wxlEgAQwo1H09-K6SbS5yaODp8Xupjq0/view?usp=sharing" target="_blank" class="project-image-link">View Building Audit Image</a>
-              </div>
-            </div>
-          </div>
-        </section>
+    </footer>
 
-        <section id="blog" class="blog-section">
-          <div class="section-header">
-            <h2>Insights & Thoughts</h2>
-          </div>
-          <div class="blog-posts">
-            <article>
-              <h3>AI in Urban Planning: Beyond the Hype</h3>
-              <p>Exploring practical applications of artificial intelligence in city design.</p>
-              <a href="https://futureurbanist.blogspot.com/2025/03/ai-in-urban-planning-beyond-hype.html" target="_blank" class="blog-link">Read Full Article</a>
-            </article>
-            <article>
-              <h3>AI in Urban Planning: Technological Insights</h3>
-              <p>Deep dive into how artificial intelligence is transforming urban landscapes.</p>
-              <a href="https://futureurbanist.blogspot.com/2025/03/ai-in-urban-planning-beyond-hype.html" target="_blank" class="blog-link">Read Full Article</a>
-            </article>
-            <article>
-              <h3>Smart Cities: The Future of Urban Living</h3>
-              <p>Exploring innovative urban design and technological integration for sustainable city living.</p>
-              <a href="https://futureurbanist.blogspot.com/2025/03/smart-cities-future-of-urban-living.html" target="_blank" class="blog-link">Read Full Article</a>
-            </article>
-          </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-          <div class="section-header">
-            <h2>Get in Touch</h2>
-          </div>
-          <form id="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/angela-naliaka" target="_blank" class="linkedin-link">LinkedIn</a>
-            <a href="https://github.com/AngelaNaliaka" target="_blank" class="github-link">GitHub</a>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <p>© 2024 Urban Tech Innovator. All Rights Reserved.</p>
-      </footer>
-
-      <script>
-        ${clientScript}
-      </script>
-    </body>
-    </html>
-  `, {
-    headers: {
-      'Content-Type': 'text/html; charset=utf-8'
-    }
-  });
-}
-
-const css = `
-:root {
-  --color-background: #f4f4f4;
-  --color-text: #2c2c2c;
-  --color-accent: #8c7f6f;
-  --color-highlight: #d3cec4;
-  --font-primary: 'IBM Plex Sans', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-primary);
-  background-color: var(--color-background);
-  color: var(--color-text);
-  line-height: 1.6;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 5%;
-  background-color: rgba(244, 244, 244, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 300;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--color-accent);
-}
-
-.hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 0 5%;
-  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-highlight) 100%);
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-family: var(--font-heading);
-  font-size: 3.5rem;
-  color: var(--color-text);
-  margin-bottom: 1rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: darken(var(--color-accent), 10%);
-}
-
-section {
-  padding: 4rem 5%;
-}
-
-.section-header h2 {
-  font-family: var(--font-heading);
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--color-accent);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.skill-bars .skill {
-  background-color: var(--color-accent);
-  color: white;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
-}
-
-.projects-section .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.project-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-link, .project-image-link, .blog-link {
-  color: var(--color-accent);
-  text-decoration: none;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-.project-details h4 {
-  margin-top: 1rem;
-  color: var(--color-accent);
-}
-
-.blog-posts article {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 768px) {
-  .about-grid, .projects-section .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-`;
-
-const clientScript = `
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Message sent! (Note: Actual submission not implemented)');
-});
-`;
+    <script src="js/script.js"></script>
+</body>
+</html>
